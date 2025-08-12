@@ -1,7 +1,5 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
-#include <iostream>
-using namespace std;
 
 LOG_MODULE_REGISTER(soil_sampler, LOG_LEVEL_INF);
 
