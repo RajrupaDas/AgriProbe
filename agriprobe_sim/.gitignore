@@ -1,0 +1,31 @@
+# Zephyr build output
+build/
+_build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+
+# Zephyr generated files
+**/zephyr/
+**/modules/
+**/west/
+**/.west/
+**/Kconfig
+**/Kconfig.zephyr
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Logs and temporary files
+*.log
+*.swp
+*.swo
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
