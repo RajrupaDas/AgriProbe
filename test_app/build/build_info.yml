@@ -1,0 +1,58 @@
+cmake:
+  application:
+    configuration-dir: '/home/quantumvortex/zephyrproject/workspace/test_app'
+    source-dir: '/home/quantumvortex/zephyrproject/workspace/test_app'
+  board:
+    name: 'qemu_cortex_m3'
+    path:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/qemu/cortex_m3'
+    qualifiers: 'ti_lm3s6965'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/qemu/cortex_m3/qemu_cortex_m3.dts'
+    include-dirs:
+     - '/home/quantumvortex/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/atmel/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/quantumvortex/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/microchip/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/microchip/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/nxp/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/stm32/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/ti/dts'
+     - '/home/quantumvortex/zephyrproject/zephyr/include'
+     - '/home/quantumvortex/zephyrproject/zephyr/include/zephyr'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/common'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/vendor'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/rx'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/x86'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/xtensa'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/sparc'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/riscv'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/posix'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arm64'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arm'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arc'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/qemu/cortex_m3/qemu_cortex_m3_defconfig'
+     - '/home/quantumvortex/zephyrproject/workspace/test_app/prj.conf'
+    user-files:
+     - '/home/quantumvortex/zephyrproject/workspace/test_app/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/quantumvortex/zephyr-sdk-0.17.2'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/quantumvortex/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/quantumvortex/venv/bin/west build -b qemu_cortex_m3 .'
+  topdir: '/home/quantumvortex/zephyrproject'
+  version: '1.4.0'
