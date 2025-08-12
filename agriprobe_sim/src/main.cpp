@@ -17,3 +17,20 @@ void drill_rotate_forward(){LOG_INF("Drill rotating forward");k_msleep(DRILL_ROT
 void drill_rotate_reverse(){LOG_INF("Drill rotating reverse");k_msleep(DRILL_ROTATE_TIME);}
 void plate_rotate_to_slot(int slot){LOG_INF("Rotating plate to slot %d",slot);k_msleep(PLATE_ROTATE_TIME);}
 
+constexpr int NUM_SLOTS=8; //arbitrary count
+bool slot_full[NUM_SLOTS];
+int current_slot=0;
+
+bool all_full(){
+    for(int i=0;i<NUM_SLOTS;i++)if(!slot_full[i])return false;
+    return true;
+}
+
+int find_next_empty(){
+    for(int i=0;i<NUM_SLOTS;i++){
+        int idx=(current_slot+i+1)%NUM_SLOTS;
+        if(!slot_full[idx])return idx;
+    }
+    return -1; //should not happen
+}
+
