@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20.0)
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(soil_sampler_sim)
+project(agriprobe_sim)
 target_sources(app PRIVATE src/main.cpp)
 
