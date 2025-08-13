@@ -27,3 +27,18 @@ It runs in `native_sim` mode with no hardware required.
 ```bash
 west build -p always -b
 
+## Software Architecture Plan
+- **motor_control.cpp / .h**
+  - Functions for Z-axis stepper, plate stepper, auger motor.
+  - Homing, movement by steps, speed control.
+
+- **slot_manager.cpp / .h**
+  - Tracks full/empty tube states.
+  - Finds next empty slot.
+
+- **main.cpp**
+  - Initializes system, runs main control loop.
+  - Calls motor_control and slot_manager functions.
+
+This modular design will make it easier to replace simulation code with hardware control later.
+
