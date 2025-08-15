@@ -1,0 +1,15 @@
+# Build artifacts
+build/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+*.log
+
+# West and Zephyr-specific
+zephyr/
+modules/
+*.o
+*.a
+*.elf
+*.map
+
