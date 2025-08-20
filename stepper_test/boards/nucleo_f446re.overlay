@@ -1,8 +1,0 @@
-/ {
-    mystepper: stepper0 {
-        compatible = "zephyr,stepper-gpio";
-      step-gpios = <&gpioe 13 GPIO_ACTIVE_LOW>;
-      dir-gpios  = <&gpiof 11 GPIO_ACTIVE_LOW>;
-  };
-};
-

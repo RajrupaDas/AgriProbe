@@ -1,0 +1,18 @@
+/ {
+    /* Put the two pins under a parent (common pattern), then alias the children */
+    stepper_pins: stepper_pins {
+        compatible = "gpio-keys";
+        step_pin: step_pin {
+            gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;   /* STEP = PA0 */
+        };
+        dir_pin: dir_pin {
+            gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;   /* DIR  = PA1 */
+        };
+    };
+
+    aliases {
+        stepper-step = &step_pin;
+        stepper-dir  = &dir_pin;
+    };
+};
+
