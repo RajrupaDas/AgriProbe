@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc")
+set(CMAKE_C_COMPILER "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "12.2.0")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar")
-set(CMAKE_C_COMPILER_AR "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar")
-set(CMAKE_RANLIB "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/../../../../arm-zephyr-eabi/bin/ld.bfd")
+set(CMAKE_AR "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar")
+set(CMAKE_C_COMPILER_AR "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ar")
+set(CMAKE_RANLIB "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc-ranlib")
+set(CMAKE_LINKER "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/arm-zephyr-eabi/bin/ld.bfd")
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
 set(CMAKE_COMPILER_IS_GNUCC 1)

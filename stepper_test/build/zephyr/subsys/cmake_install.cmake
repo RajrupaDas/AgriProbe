@@ -34,106 +34,33 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/canbus/cmake_install.cmake")
-endif()
+  # Include the install script for each subdirectory.
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/canbus/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/debug/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/fb/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/fs/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/gnss/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/ipc/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/logging/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/mem_mgmt/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/mgmt/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/modbus/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/pm/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/pmci/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/portability/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/random/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/rtio/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/sd/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/stats/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/storage/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/task_wdt/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/testsuite/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/tracing/cmake_install.cmake")
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/subsys/usb/cmake_install.cmake")
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/debug/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/fb/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/fs/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/ipc/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/logging/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/mem_mgmt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/mgmt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/modbus/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/pm/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/portability/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/random/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/rtio/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/sd/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/stats/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/storage/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/task_wdt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/testsuite/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/tracing/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/subsys/usb/cmake_install.cmake")
 endif()
 

@@ -1,30 +1,33 @@
 # Available runners configured by board.cmake.
 runners:
+- stm32cubeprogrammer
 - openocd
 - jlink
-- stm32cubeprogrammer
 
 # Default flash runner if --runner is not given.
-flash-runner: openocd
+flash-runner: stm32cubeprogrammer
 
 # Default debug runner if --runner is not given.
 debug-runner: openocd
 
 # Common runner configuration values.
 config:
-  board_dir: /home/quantumvortex/zephyrproject/zephyr/boards/arm/nucleo_h7a3zi_q
+  board_dir: /home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q
   # Build outputs:
   elf_file: zephyr.elf
   hex_file: zephyr.hex
   bin_file: zephyr.bin
   # Host tools:
-  gdb: /home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
-  openocd: /home/quantumvortex/zephyr-sdk-0.17.2/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  gdb: /home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
   openocd_search:
-    - /home/quantumvortex/zephyr-sdk-0.17.2/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+    - /home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
 
 # Runner specific arguments
 args:
+  stm32cubeprogrammer:
+    - --port=swd
+    - --reset-mode=hw
   openocd:
     - --cmd-load
     - flash write_image erase
@@ -35,6 +38,3 @@ args:
     - --dt-flash=y
     - --device=STM32H7A3ZI
     - --speed=4000
-  stm32cubeprogrammer:
-    - --port=swd
-    - --reset-mode=hw

@@ -1,0 +1,2 @@
+# Load Zephyr board Kconfig descriptions.
+osource "/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/Kconfig"

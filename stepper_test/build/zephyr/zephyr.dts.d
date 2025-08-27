@@ -1,5 +1,5 @@
 empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
- /home/quantumvortex/zephyrproject/zephyr/boards/arm/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts \
+ /home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts \
  /home/quantumvortex/zephyrproject/zephyr/dts/arm/st/h7/stm32h7a3Xi.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/dts/common/mem.h \
  /home/quantumvortex/zephyrproject/zephyr/dts/arm/st/h7/stm32h7a3.dtsi \
@@ -7,6 +7,7 @@ empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
  /home/quantumvortex/zephyrproject/zephyr/dts/arm/armv7-m.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/dts/common/skeleton.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/stm32h7_clock.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/clock/stm32_common_clocks.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/gpio/gpio.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/i2c/i2c.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/pwm/pwm.h \
@@ -15,10 +16,7 @@ empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/stm32h7_adc.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/stm32_adc.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/adc/adc.h \
- /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32h7_reset.h \
- /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32-common.h \
- /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/memory-controller/stm32-fmc-sdram.h \
- /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/memory-attr/memory-attr.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/dt-util.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_macro.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_internal.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_loops.h \
@@ -27,6 +25,10 @@ empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_inc.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_dec.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/sys/util_internal_util_x2.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32h7_reset.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/reset/stm32-common.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/memory-controller/stm32-fmc-sdram.h \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/memory-attr/memory-attr.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/memory-attr/memory-attr-arm.h \
  /home/quantumvortex/zephyrproject/zephyr/dts/common/freq.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/display/panel.h \
@@ -34,6 +36,7 @@ empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
  /home/quantumvortex/zephyrproject/modules/hal/stm32/dts/st/h7/stm32h7a3z(g-i)txq-pinctrl.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl.h \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl-common.h \
- /home/quantumvortex/zephyrproject/zephyr/boards/arm/nucleo_h7a3zi_q/arduino_r3_connector.dtsi \
+ /home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/arduino_r3_connector.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- boards/app.overlay
+ boards/app.overlay \
+ /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/sensor/qdec_stm32.h

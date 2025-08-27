@@ -1,4 +1,4 @@
-# Install script for directory: /home/quantumvortex/zephyrproject/workspace/stepper_test
+# Install script for directory: /home/quantumvortex/zephyrproject/agriprobe/stepper_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/quantumvortex/zephyr-sdk-0.17.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/quantumvortex/zephyrproject/workspace/stepper_test/build/zephyr/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/quantumvortex/zephyrproject/workspace/stepper_test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

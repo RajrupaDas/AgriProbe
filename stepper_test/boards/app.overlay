@@ -1,18 +1,13 @@
+#include <zephyr/dt-bindings/sensor/qdec_stm32.h>
 / {
-    /* Put the two pins under a parent (common pattern), then alias the children */
-    stepper_pins: stepper_pins {
-        compatible = "gpio-keys";
-        step_pin: step_pin {
-            gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;   /* STEP = PA0 */
-        };
-        dir_pin: dir_pin {
-            gpios = <&gpioa 1 GPIO_ACTIVE_HIGH>;   /* DIR  = PA1 */
-        };
-    };
+	stepper-motors {
+		compatible = "stepper-motors";
 
-    aliases {
-        stepper-step = &step_pin;
-        stepper-dir  = &dir_pin;
-    };
+		stepper_motor_2: stepper-motor-2 {
+			compatible = "gpio-stepper-motor";
+			label = "First Link Stepper Motor";
+			dir-gpios = <&gpiob 7 GPIO_ACTIVE_LOW>;
+			step-gpios = <&gpioc 0 GPIO_ACTIVE_LOW>;
+		};
+	};
 };
-

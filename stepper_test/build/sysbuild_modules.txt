@@ -1,0 +1,1 @@
+"mcuboot":"/home/quantumvortex/zephyrproject/bootloader/mcuboot":"/home/quantumvortex/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"

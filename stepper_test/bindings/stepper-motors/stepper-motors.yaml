@@ -1,0 +1,18 @@
+description: Stepper motor with direction and step pins
+compatible: "gpio-stepper-motor"
+
+properties:
+    dir-gpios:
+        required: true
+        type: phandle-array
+        description: |
+            GPIO pin for the motor direction.
+    step-gpios:
+        required: true
+        type: phandle-array
+        description: |
+            GPIO pin for the motor step.
+    label:
+        type: string
+        description: |
+            Human readable string describing the motor.
