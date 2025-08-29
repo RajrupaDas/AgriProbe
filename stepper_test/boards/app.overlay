@@ -1,37 +1,96 @@
-/*
- * This file contains an overlay for the Nucleo board's Device Tree.
- *
- * It defines aliases for the GPIO controllers on the board
- * so they can be easily referenced by name in other nodes.
- *
- * It also defines the stepper motor device with its GPIO pins.
- */
 #include <zephyr/dt-bindings/sensor/qdec_stm32.h>
-
-/ {
-    /*
-     * Define aliases for the GPIO controllers.
-     * This is necessary because the main Devicetree file may not
-     * have these aliases defined, causing the build to fail.
-     */
-    aliases {
-        gpiob = &gpiob;
-        gpioc = &gpioc;
-    };
-
-    /*
-     * This is your original stepper motor node definition.
-     * With the aliases defined above, this node's 'dir-gpios'
-     * and 'step-gpios' properties will now resolve correctly.
-     */
-    stepper-motors {
-        stepper_motor_2: stepper-motor-2 {
-            compatible = "gpio-stepper-motor";
-            status = "okay";
-            label = "First Link Stepper Motor";
-            dir-gpios = <&gpioa 7 GPIO_ACTIVE_HIGH>;
-            step-gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
-        };
-    };
+/{
+aliases {
+stepper-motor2 = &stepper_motor_2;
+stepper-motor3 = &stepper_motor_3;
+stepper-motor4 = &stepper_motor_4;
+};
 };
 
+&i2c1 {
+status = "okay";
+pinctrl-0 = <&i2c1_scl_pb6 &i2c1_sda_pb9>;
+pinctrl-names = "default";
+clock-frequency = <I2C_BITRATE_STANDARD>;
+lj_imu: mpu6050@68 {
+compatible = "invensense,mpu6050";
+reg = <0x68>;
+status = "okay";
+};
+uj_imu: mpu6050@69 {
+compatible = "invensense,mpu6050";
+reg = <0x69>;
+status = "okay";
+};
+};
+
+&i2c4 {
+status = "okay";
+pinctrl-0 = <&i2c4_scl_pf14 &i2c4_sda_pf15>;
+pinctrl-names = "default";
+clock-frequency = <I2C_BITRATE_STANDARD>;
+tt_imu: mpu6050@68 {
+compatible = "invensense,mpu6050";
+reg = <0x68>;
+status = "okay";
+};
+pr_imu: mpu6050@69 {
+compatible = "invensense,mpu6050";
+reg = <0x69>;
+status = "okay";
+};
+};
+
+&usart2 {
+status = "okay";
+};
+
+&gpioa {
+status = "okay";
+};
+
+&gpiob {
+status = "okay";
+};
+
+&gpioc {
+status = "okay";
+};
+
+&gpiod {
+status = "okay";
+};
+
+&gpioe {
+status = "okay";
+};
+
+&gpiof {
+status = "okay";
+};
+
+&gpiog {
+status = "okay";
+};
+
+/ {
+steppermotors {
+compatible = "stepper-motors";
+stepper_motor_2: motor_2 {
+label = "First Link";
+dir-gpios = <&gpiob 7 GPIO_ACTIVE_LOW>;
+
+step-gpios = <&gpioc 0 GPIO_ACTIVE_LOW>;
+};
+stepper_motor_3: motor_3 {
+label = "Second Link";
+dir-gpios = <&gpiog 14 GPIO_ACTIVE_HIGH>;
+step-gpios = <&gpiob 1 GPIO_ACTIVE_LOW>;
+};
+stepper_motor_4: motor_4 {
+label = "Pitch";
+dir-gpios = <&gpioa 8 GPIO_ACTIVE_LOW>;
+step-gpios = <&gpiog 12 GPIO_ACTIVE_LOW>;
+};
+};
+};

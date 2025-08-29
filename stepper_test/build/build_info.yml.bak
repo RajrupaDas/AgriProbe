@@ -1,5 +1,0 @@
-west:
-  command: /home/quantumvortex/zephyrproject/.zeph/bin/west build -p=always -o=-j10
-    -b nucleo_h7a3zi_q
-  topdir: /home/quantumvortex/zephyrproject
-  version: 1.4.0

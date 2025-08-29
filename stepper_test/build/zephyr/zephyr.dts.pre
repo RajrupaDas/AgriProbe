@@ -5628,35 +5628,102 @@ zephyr_udc0: &usbotg_hs {
 };
 # 0 "<command-line>" 2
 # 1 "./boards/app.overlay" 1
-# 9 "./boards/app.overlay"
 # 1 "/home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/sensor/qdec_stm32.h" 1 3 4
-# 10 "./boards/app.overlay" 2
+# 2 "./boards/app.overlay" 2
+/{
+aliases {
+stepper-motor2 = &stepper_motor_2;
+stepper-motor3 = &stepper_motor_3;
+stepper-motor4 = &stepper_motor_4;
+};
+};
+
+&i2c1 {
+status = "okay";
+pinctrl-0 = <&i2c1_scl_pb6 &i2c1_sda_pb9>;
+pinctrl-names = "default";
+clock-frequency = <100000>;
+lj_imu: mpu6050@68 {
+compatible = "invensense,mpu6050";
+reg = <0x68>;
+status = "okay";
+};
+uj_imu: mpu6050@69 {
+compatible = "invensense,mpu6050";
+reg = <0x69>;
+status = "okay";
+};
+};
+
+&i2c4 {
+status = "okay";
+pinctrl-0 = <&i2c4_scl_pf14 &i2c4_sda_pf15>;
+pinctrl-names = "default";
+clock-frequency = <100000>;
+tt_imu: mpu6050@68 {
+compatible = "invensense,mpu6050";
+reg = <0x68>;
+status = "okay";
+};
+pr_imu: mpu6050@69 {
+compatible = "invensense,mpu6050";
+reg = <0x69>;
+status = "okay";
+};
+};
+
+&usart2 {
+status = "okay";
+};
+
+&gpioa {
+status = "okay";
+};
+
+&gpiob {
+status = "okay";
+};
+
+&gpioc {
+status = "okay";
+};
+
+&gpiod {
+status = "okay";
+};
+
+&gpioe {
+status = "okay";
+};
+
+&gpiof {
+status = "okay";
+};
+
+&gpiog {
+status = "okay";
+};
 
 / {
+steppermotors {
+compatible = "stepper-motors";
+stepper_motor_2: motor_2 {
+label = "First Link";
+dir-gpios = <&gpiob 7 (1 << 0)>;
 
-
-
-
-
-    aliases {
-        gpiob = &gpiob;
-        gpioc = &gpioc;
-    };
-
-
-
-
-
-
-    stepper-motors {
-        stepper_motor_2: stepper-motor-2 {
-            compatible = "gpio-stepper-motor";
-            status = "okay";
-            label = "First Link Stepper Motor";
-            dir-gpios = <&gpioa 7 (0 << 0)>;
-            step-gpios = <&gpioa 0 (0 << 0)>;
-        };
-    };
+step-gpios = <&gpioc 0 (1 << 0)>;
+};
+stepper_motor_3: motor_3 {
+label = "Second Link";
+dir-gpios = <&gpiog 14 (0 << 0)>;
+step-gpios = <&gpiob 1 (1 << 0)>;
+};
+stepper_motor_4: motor_4 {
+label = "Pitch";
+dir-gpios = <&gpioa 8 (1 << 0)>;
+step-gpios = <&gpiog 12 (1 << 0)>;
+};
+};
 };
 # 0 "<command-line>" 2
 # 1 "/home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c"
