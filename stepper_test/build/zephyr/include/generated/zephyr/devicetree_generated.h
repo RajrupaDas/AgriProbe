@@ -6156,6 +6156,7 @@
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800_EXISTS 1
+#define DT_N_ALIAS_gpioc          DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
 #define DT_N_INST_2_st_stm32_gpio DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
 #define DT_N_NODELABEL_gpioc      DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
 
@@ -6488,6 +6489,7 @@
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400_EXISTS 1
+#define DT_N_ALIAS_gpiob          DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
 #define DT_N_INST_1_st_stm32_gpio DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
 #define DT_N_NODELABEL_gpiob      DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
 
@@ -26296,7 +26298,6 @@
 
 /* Existence and alternate IDs: */
 #define DT_N_S_stepper_motors_EXISTS 1
-#define DT_N_INST_0_stepper_motors DT_N_S_stepper_motors
 
 /* Macros for properties that are special in the specification: */
 #define DT_N_S_stepper_motors_REG_NUM 0
@@ -26304,25 +26305,12 @@
 #define DT_N_S_stepper_motors_FOREACH_RANGE(fn) 
 #define DT_N_S_stepper_motors_IRQ_NUM 0
 #define DT_N_S_stepper_motors_IRQ_LEVEL 0
-#define DT_N_S_stepper_motors_COMPAT_MATCHES_stepper_motors 1
 #define DT_N_S_stepper_motors_STATUS_okay 1
 
 /* Pin control (pinctrl-<i>, pinctrl-names) properties: */
 #define DT_N_S_stepper_motors_PINCTRL_NUM 0
 
-/* Generic property macros: */
-#define DT_N_S_stepper_motors_P_compatible {"stepper-motors"}
-#define DT_N_S_stepper_motors_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_stepper_motors_P_compatible_IDX_0 "stepper-motors"
-#define DT_N_S_stepper_motors_P_compatible_IDX_0_STRING_UNQUOTED stepper-motors
-#define DT_N_S_stepper_motors_P_compatible_IDX_0_STRING_TOKEN stepper_motors
-#define DT_N_S_stepper_motors_P_compatible_IDX_0_STRING_UPPER_TOKEN STEPPER_MOTORS
-#define DT_N_S_stepper_motors_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_stepper_motors, compatible, 0)
-#define DT_N_S_stepper_motors_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_stepper_motors, compatible, 0)
-#define DT_N_S_stepper_motors_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_stepper_motors, compatible, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors, compatible, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_P_compatible_LEN 1
-#define DT_N_S_stepper_motors_P_compatible_EXISTS 1
+/* (No generic property macros) */
 
 /*
  * Devicetree node: /stepper-motors/stepper-motor-2
@@ -26407,6 +26395,21 @@
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, compatible, 0, __VA_ARGS__)
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_LEN 1
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_EXISTS 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status "okay"
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_UNQUOTED okay
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_TOKEN okay
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_UPPER_TOKEN OKAY
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0 "okay"
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_EXISTS 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_ENUM_IDX 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_ENUM_VAL_okay_EXISTS 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_ENUM_VAL_okay_EXISTS 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0)
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0)
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0, __VA_ARGS__)
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0, __VA_ARGS__)
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_LEN 1
+#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_EXISTS 1
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_label "First Link Stepper Motor"
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_STRING_UNQUOTED First Link Stepper Motor
 #define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_STRING_TOKEN First_Link_Stepper_Motor
@@ -26488,7 +26491,6 @@
 #define DT_COMPAT_HAS_OKAY_gpio_leds 1
 #define DT_COMPAT_HAS_OKAY_pwm_leds 1
 #define DT_COMPAT_HAS_OKAY_gpio_keys 1
-#define DT_COMPAT_HAS_OKAY_stepper_motors 1
 #define DT_COMPAT_HAS_OKAY_gpio_stepper_motor 1
 
 /*
@@ -26533,7 +26535,6 @@
 #define DT_N_INST_gpio_leds_NUM_OKAY 1
 #define DT_N_INST_pwm_leds_NUM_OKAY 1
 #define DT_N_INST_gpio_keys_NUM_OKAY 1
-#define DT_N_INST_stepper_motors_NUM_OKAY 1
 #define DT_N_INST_gpio_stepper_motor_NUM_OKAY 1
 #define DT_FOREACH_OKAY_st_stm32h7a3zi_q_nucleo(fn) fn(DT_N)
 #define DT_FOREACH_OKAY_VARGS_st_stm32h7a3zi_q_nucleo(fn, ...) fn(DT_N, __VA_ARGS__)
@@ -26691,10 +26692,6 @@
 #define DT_FOREACH_OKAY_VARGS_gpio_keys(fn, ...) fn(DT_N_S_gpio_keys, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_gpio_keys(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_gpio_keys(fn, ...) fn(0, __VA_ARGS__)
-#define DT_FOREACH_OKAY_stepper_motors(fn) fn(DT_N_S_stepper_motors)
-#define DT_FOREACH_OKAY_VARGS_stepper_motors(fn, ...) fn(DT_N_S_stepper_motors, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_stepper_motors(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_stepper_motors(fn, ...) fn(0, __VA_ARGS__)
 #define DT_FOREACH_OKAY_gpio_stepper_motor(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
 #define DT_FOREACH_OKAY_VARGS_gpio_stepper_motor(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_gpio_stepper_motor(fn) fn(0)

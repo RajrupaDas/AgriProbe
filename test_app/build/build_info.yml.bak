@@ -1,4 +1,0 @@
-west:
-  command: /home/quantumvortex/venv/bin/west build -b qemu_cortex_m3 .
-  topdir: /home/quantumvortex/zephyrproject
-  version: 1.4.0
