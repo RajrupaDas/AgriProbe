@@ -1,0 +1,15 @@
+/{ 
+    aliases {
+        pwm-motor0 = &pwm_motor0;
+    };
+
+    pwm_motors {
+        compatible = "pwm-motors";
+        pwm_motor0: motor-0 {
+            pwms = <&pwm12 1 PWM_POLARITY_NORMAL>;
+            min-pulse = <1000000>;
+            max-pulse = <2000000>;
+        };
+    };
+
+};
