@@ -21,20 +21,11 @@
 
 	/* node '/aliases' defined in zephyr/dts/common/skeleton.dtsi:13 */
 	aliases {
-<<<<<<< HEAD
 		led0 = &green_led;                 /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:59 */
 		led1 = &yellow_led;                /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:60 */
 		pwm-led0 = &red_pwm_led;           /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:61 */
 		sw0 = &user_button;                /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:62 */
 		stepper-motor2 = &stepper_motor_2; /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:4 */
-=======
-		led0 = &green_led;       /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:59 */
-		led1 = &yellow_led;      /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:60 */
-		pwm-led0 = &red_pwm_led; /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:61 */
-		sw0 = &user_button;      /* in zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts:62 */
-		gpiob = &gpiob;          /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:18 */
-		gpioc = &gpioc;          /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:19 */
->>>>>>> parent of 5731347 (rewrote with just overlay)
 	};
 
 	/* node '/soc' defined in zephyr/dts/arm/armv7-m.dtsi:6 */
@@ -1739,7 +1730,6 @@
 		};
 	};
 
-<<<<<<< HEAD
 	/* node '/steppermotors' defined in agriprobe/stepper_test/build/zephyr/boards/app.overlay:7 */
 	steppermotors {
 		compatible = "stepper-motors"; /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:8 */
@@ -1749,18 +1739,6 @@
 			label = "First Link";            /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:10 */
 			dir-gpios = < &gpiob 0x7 0x1 >;  /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:11 */
 			step-gpios = < &gpioc 0x0 0x1 >; /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:12 */
-=======
-	/* node '/stepper-motors' defined in agriprobe/stepper_test/build/zephyr/boards/app.overlay:27 */
-	stepper-motors {
-
-		/* node '/stepper-motors/stepper-motor-2' defined in agriprobe/stepper_test/build/zephyr/boards/app.overlay:28 */
-		stepper_motor_2: stepper-motor-2 {
-			compatible = "gpio-stepper-motor";  /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:29 */
-			status = "okay";                    /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:30 */
-			label = "First Link Stepper Motor"; /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:31 */
-			dir-gpios = < &gpioa 0x7 0x0 >;     /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:32 */
-			step-gpios = < &gpioa 0x0 0x0 >;    /* in agriprobe/stepper_test/build/zephyr/boards/app.overlay:33 */
->>>>>>> parent of 5731347 (rewrote with just overlay)
 		};
 	};
 };

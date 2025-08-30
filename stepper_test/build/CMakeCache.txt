@@ -226,11 +226,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-<<<<<<< HEAD
-CMAKE_PROJECT_NAME:STATIC=StepperTest
-=======
 CMAKE_PROJECT_NAME:STATIC=Tarzan
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=4.2.99
@@ -370,18 +366,6 @@ Picolibc_SOURCE_DIR:STATIC=/home/quantumvortex/zephyrproject/modules/lib/picolib
 //Path to the SoC directory.
 SOC_FULL_DIR:PATH=
 
-<<<<<<< HEAD
-//Value Computed by CMake
-StepperTest_BINARY_DIR:STATIC=/home/quantumvortex/zephyrproject/agriprobe/stepper_test/build
-
-//Value Computed by CMake
-StepperTest_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-StepperTest_SOURCE_DIR:STATIC=/home/quantumvortex/zephyrproject/agriprobe/stepper_test
-
-=======
->>>>>>> parent of 5731347 (rewrote with just overlay)
 //True if toolchain supports newlib
 TOOLCHAIN_HAS_NEWLIB:BOOL=ON
 
@@ -441,11 +425,7 @@ Zephyr_DIR:PATH=/home/quantumvortex/zephyrproject/zephyr/share/zephyr-package/cm
 //List of board directories for board (nucleo_h7a3zi_q)
 BOARD_DIRECTORIES:INTERNAL=/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q
 //DT bindings root directories
-<<<<<<< HEAD
 CACHED_DTS_ROOT_BINDINGS:INTERNAL=/home/quantumvortex/zephyrproject/agriprobe/stepper_test/dts/bindings;/home/quantumvortex/zephyrproject/zephyr/dts/bindings
-=======
-CACHED_DTS_ROOT_BINDINGS:INTERNAL=/home/quantumvortex/zephyrproject/zephyr/dts/bindings
->>>>>>> parent of 5731347 (rewrote with just overlay)
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR

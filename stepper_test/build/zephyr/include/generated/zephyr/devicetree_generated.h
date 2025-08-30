@@ -5,11 +5,7 @@
  *   /home/quantumvortex/zephyrproject/agriprobe/stepper_test/build/zephyr/zephyr.dts.pre
  *
  * Directories with bindings:
-<<<<<<< HEAD
  *   /home/quantumvortex/zephyrproject/agriprobe/stepper_test/dts/bindings, $ZEPHYR_BASE/dts/bindings
-=======
- *   $ZEPHYR_BASE/dts/bindings
->>>>>>> parent of 5731347 (rewrote with just overlay)
  *
  * Node dependency ordering (ordinal and path):
  *   0   /
@@ -179,13 +175,8 @@
  *   164 /soc/timers@40014800
  *   165 /soc/timers@40014800/counter
  *   166 /soc/timers@40014800/pwm
-<<<<<<< HEAD
  *   167 /steppermotors
  *   168 /steppermotors/motor_2
-=======
- *   167 /stepper-motors
- *   168 /stepper-motors/stepper-motor-2
->>>>>>> parent of 5731347 (rewrote with just overlay)
  *
  * Definitions derived from these nodes in dependency order are next,
  * followed by /chosen nodes.
@@ -218,7 +209,6 @@
 /* Helper macros for child nodes of this node. */
 #define DT_N_CHILD_NUM 29
 #define DT_N_CHILD_NUM_STATUS_OKAY 22
-<<<<<<< HEAD
 #define DT_N_FOREACH_CHILD(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_cpus) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_mcos) fn(DT_N_S_dietemp) fn(DT_N_S_vbat) fn(DT_N_S_vref) fn(DT_N_S_smbus1) fn(DT_N_S_smbus2) fn(DT_N_S_smbus3) fn(DT_N_S_smbus4) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_gpio_keys) fn(DT_N_S_steppermotors)
 #define DT_N_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_dietemp) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vbat) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vref) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus3) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus4) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_steppermotors)
 #define DT_N_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_dietemp, __VA_ARGS__) fn(DT_N_S_vbat, __VA_ARGS__) fn(DT_N_S_vref, __VA_ARGS__) fn(DT_N_S_smbus1, __VA_ARGS__) fn(DT_N_S_smbus2, __VA_ARGS__) fn(DT_N_S_smbus3, __VA_ARGS__) fn(DT_N_S_smbus4, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_steppermotors, __VA_ARGS__)
@@ -227,16 +217,6 @@
 #define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_steppermotors)
 #define DT_N_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_steppermotors, __VA_ARGS__)
 #define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_steppermotors, __VA_ARGS__)
-=======
-#define DT_N_FOREACH_CHILD(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_cpus) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_mcos) fn(DT_N_S_dietemp) fn(DT_N_S_vbat) fn(DT_N_S_vref) fn(DT_N_S_smbus1) fn(DT_N_S_smbus2) fn(DT_N_S_smbus3) fn(DT_N_S_smbus4) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_gpio_keys) fn(DT_N_S_stepper_motors)
-#define DT_N_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_dietemp) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vbat) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vref) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus1) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus2) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus3) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus4) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_stepper_motors)
-#define DT_N_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_dietemp, __VA_ARGS__) fn(DT_N_S_vbat, __VA_ARGS__) fn(DT_N_S_vref, __VA_ARGS__) fn(DT_N_S_smbus1, __VA_ARGS__) fn(DT_N_S_smbus2, __VA_ARGS__) fn(DT_N_S_smbus3, __VA_ARGS__) fn(DT_N_S_smbus4, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_stepper_motors, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_dietemp, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vbat, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_vref, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus3, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_smbus4, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_stepper_motors, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_cpus) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_mcos) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_pwmleds) fn(DT_N_S_gpio_keys) fn(DT_N_S_stepper_motors)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_chosen) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_stepper_motors)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_stepper_motors, __VA_ARGS__)
-#define DT_N_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_chosen, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_aliases, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_soc, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_cpus, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_90000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_clocks, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_mcos, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_24040000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_240a0000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_30010000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_38000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_20000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_memory_70000000, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_connector, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_leds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_pwmleds, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_gpio_keys, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep fn(DT_N_S_stepper_motors, __VA_ARGS__)
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /* Node's hash: */
 #define DT_N_HASH il7asoJjJEMhngUeSt4tHVu8Zxx4EFG_FDeJfL3_oPE
@@ -278,11 +258,7 @@
 	52, /* /mcos */ \
 	59, /* /pwmleds */ \
 	110, /* /otghs_fs_phy */ \
-<<<<<<< HEAD
 	167, /* /steppermotors */
-=======
-	167, /* /stepper-motors */
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /* Existence and alternate IDs: */
 #define DT_N_EXISTS 1
@@ -6176,20 +6152,12 @@
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800_SUPPORTS_ORDS \
 	45, /* /gpio_keys */ \
-<<<<<<< HEAD
 	46, /* /gpio_keys/button_0 */ \
 	167, /* /steppermotors */ \
 	168, /* /steppermotors/motor_2 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800_EXISTS 1
-=======
-	46, /* /gpio_keys/button_0 */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800_EXISTS 1
-#define DT_N_ALIAS_gpioc          DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
->>>>>>> parent of 5731347 (rewrote with just overlay)
 #define DT_N_INST_2_st_stm32_gpio DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
 #define DT_N_NODELABEL_gpioc      DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800
 
@@ -6518,20 +6486,12 @@
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400_SUPPORTS_ORDS \
 	49, /* /leds */ \
-<<<<<<< HEAD
 	50, /* /leds/led_0 */ \
 	167, /* /steppermotors */ \
 	168, /* /steppermotors/motor_2 */
 
 /* Existence and alternate IDs: */
 #define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400_EXISTS 1
-=======
-	50, /* /leds/led_0 */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400_EXISTS 1
-#define DT_N_ALIAS_gpiob          DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
->>>>>>> parent of 5731347 (rewrote with just overlay)
 #define DT_N_INST_1_st_stm32_gpio DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
 #define DT_N_NODELABEL_gpiob      DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400
 
@@ -26285,7 +26245,6 @@
 #define DT_N_S_soc_S_timers_40014800_S_pwm_P_zephyr_pm_device_runtime_auto_EXISTS 1
 
 /*
-<<<<<<< HEAD
  * Devicetree node: /steppermotors
  *
  * Node identifier: DT_N_S_steppermotors
@@ -26488,187 +26447,6 @@
 #define DT_N_S_steppermotors_S_motor_2_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_steppermotors_S_motor_2, label, 0, __VA_ARGS__)
 #define DT_N_S_steppermotors_S_motor_2_P_label_LEN 1
 #define DT_N_S_steppermotors_S_motor_2_P_label_EXISTS 1
-=======
- * Devicetree node: /stepper-motors
- *
- * Node identifier: DT_N_S_stepper_motors
- */
-
-/* Node's full path: */
-#define DT_N_S_stepper_motors_PATH "/stepper-motors"
-
-/* Node's name with unit-address: */
-#define DT_N_S_stepper_motors_FULL_NAME "stepper-motors"
-#define DT_N_S_stepper_motors_FULL_NAME_UNQUOTED stepper-motors
-#define DT_N_S_stepper_motors_FULL_NAME_TOKEN stepper_motors
-#define DT_N_S_stepper_motors_FULL_NAME_UPPER_TOKEN STEPPER_MOTORS
-
-/* Node parent (/) identifier: */
-#define DT_N_S_stepper_motors_PARENT DT_N
-
-/* Node's index in its parent's list of children: */
-#define DT_N_S_stepper_motors_CHILD_IDX 28
-
-/* Helpers for dealing with node labels: */
-#define DT_N_S_stepper_motors_NODELABEL_NUM 0
-#define DT_N_S_stepper_motors_FOREACH_NODELABEL(fn) 
-#define DT_N_S_stepper_motors_FOREACH_NODELABEL_VARGS(fn, ...) 
-#define DT_N_S_stepper_motors_FOREACH_ANCESTOR(fn) fn(DT_N)
-
-/* Helper macros for child nodes of this node. */
-#define DT_N_S_stepper_motors_CHILD_NUM 1
-#define DT_N_S_stepper_motors_CHILD_NUM_STATUS_OKAY 1
-#define DT_N_S_stepper_motors_FOREACH_CHILD(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_STATUS_OKAY(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-#define DT_N_S_stepper_motors_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-
-/* Node's hash: */
-#define DT_N_S_stepper_motors_HASH GVFmfA6RE_V06i9E8UXO_DCJLAdoXlfD7NDetz6u8Sc
-
-/* Node's dependency ordinal: */
-#define DT_N_S_stepper_motors_ORD 167
-#define DT_N_S_stepper_motors_ORD_STR_SORTABLE 00167
-
-/* Ordinals for what this node depends on directly: */
-#define DT_N_S_stepper_motors_REQUIRES_ORDS \
-	0, /* / */
-
-/* Ordinals for what depends directly on this node: */
-#define DT_N_S_stepper_motors_SUPPORTS_ORDS \
-	168, /* /stepper-motors/stepper-motor-2 */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_stepper_motors_EXISTS 1
-
-/* Macros for properties that are special in the specification: */
-#define DT_N_S_stepper_motors_REG_NUM 0
-#define DT_N_S_stepper_motors_RANGES_NUM 0
-#define DT_N_S_stepper_motors_FOREACH_RANGE(fn) 
-#define DT_N_S_stepper_motors_IRQ_NUM 0
-#define DT_N_S_stepper_motors_IRQ_LEVEL 0
-#define DT_N_S_stepper_motors_STATUS_okay 1
-
-/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_stepper_motors_PINCTRL_NUM 0
-
-/* (No generic property macros) */
-
-/*
- * Devicetree node: /stepper-motors/stepper-motor-2
- *
- * Node identifier: DT_N_S_stepper_motors_S_stepper_motor_2
- */
-
-/* Node's full path: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_PATH "/stepper-motors/stepper-motor-2"
-
-/* Node's name with unit-address: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FULL_NAME "stepper-motor-2"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FULL_NAME_UNQUOTED stepper-motor-2
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FULL_NAME_TOKEN stepper_motor_2
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FULL_NAME_UPPER_TOKEN STEPPER_MOTOR_2
-
-/* Node parent (/stepper-motors) identifier: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_PARENT DT_N_S_stepper_motors
-
-/* Node's index in its parent's list of children: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_CHILD_IDX 0
-
-/* Helpers for dealing with node labels: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_NODELABEL_NUM 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_NODELABEL(fn) fn(stepper_motor_2)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_NODELABEL_VARGS(fn, ...) fn(stepper_motor_2, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_ANCESTOR(fn) fn(DT_N_S_stepper_motors) fn(DT_N)
-
-/* Helper macros for child nodes of this node. */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_CHILD_NUM 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_CHILD_NUM_STATUS_OKAY 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD(fn) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_SEP(fn, sep) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_VARGS(fn, ...) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_SEP_VARGS(fn, sep, ...) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_STATUS_OKAY(fn) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_STATUS_OKAY_SEP(fn, sep) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_STATUS_OKAY_VARGS(fn, ...) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_CHILD_STATUS_OKAY_SEP_VARGS(fn, sep, ...) 
-
-/* Node's hash: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_HASH GYAN_CS9tN8MaWfsB_L3B00DjhzoQhLtPLLCZQjeVkM
-
-/* Node's dependency ordinal: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_ORD 168
-#define DT_N_S_stepper_motors_S_stepper_motor_2_ORD_STR_SORTABLE 00168
-
-/* Ordinals for what this node depends on directly: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_REQUIRES_ORDS \
-	167, /* /stepper-motors */
-
-/* Ordinals for what depends directly on this node: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_SUPPORTS_ORDS /* nothing */
-
-/* Existence and alternate IDs: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_EXISTS 1
-#define DT_N_INST_0_gpio_stepper_motor DT_N_S_stepper_motors_S_stepper_motor_2
-#define DT_N_NODELABEL_stepper_motor_2 DT_N_S_stepper_motors_S_stepper_motor_2
-
-/* Macros for properties that are special in the specification: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_REG_NUM 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_RANGES_NUM 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_FOREACH_RANGE(fn) 
-#define DT_N_S_stepper_motors_S_stepper_motor_2_IRQ_NUM 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_IRQ_LEVEL 0
-#define DT_N_S_stepper_motors_S_stepper_motor_2_COMPAT_MATCHES_gpio_stepper_motor 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_STATUS_okay 1
-
-/* Pin control (pinctrl-<i>, pinctrl-names) properties: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_PINCTRL_NUM 0
-
-/* Generic property macros: */
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible {"gpio-stepper-motor"}
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_IDX_0_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_IDX_0 "gpio-stepper-motor"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_IDX_0_STRING_UNQUOTED gpio-stepper-motor
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_IDX_0_STRING_TOKEN gpio_stepper_motor
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_IDX_0_STRING_UPPER_TOKEN GPIO_STEPPER_MOTOR
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_FOREACH_PROP_ELEM(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2, compatible, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2, compatible, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, compatible, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, compatible, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_LEN 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_compatible_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status "okay"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_UNQUOTED okay
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_TOKEN okay
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_STRING_UPPER_TOKEN OKAY
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0 "okay"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_ENUM_IDX 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_IDX_0_ENUM_VAL_okay_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_ENUM_VAL_okay_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, status, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_LEN 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_status_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label "First Link Stepper Motor"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_STRING_UNQUOTED First Link Stepper Motor
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_STRING_TOKEN First_Link_Stepper_Motor
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_STRING_UPPER_TOKEN FIRST_LINK_STEPPER_MOTOR
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_IDX_0 "First Link Stepper Motor"
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_IDX_0_EXISTS 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2, label, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_stepper_motors_S_stepper_motor_2, label, 0)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, label, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, label, 0, __VA_ARGS__)
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_LEN 1
-#define DT_N_S_stepper_motors_S_stepper_motor_2_P_label_EXISTS 1
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /*
  * Chosen nodes
@@ -26691,17 +26469,10 @@
 #define DT_CHOSEN_zephyr_itcm_EXISTS             1
 
 /* Macros for iterating over all nodes and enabled nodes */
-<<<<<<< HEAD
 #define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_flash_controller_52002000) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000) fn(DT_N_S_soc_S_rcc_58024400) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller) fn(DT_N_S_soc_S_interrupt_controller_58000000) fn(DT_N_S_soc_S_pin_controller_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12) fn(DT_N_S_soc_S_watchdog_58004800) fn(DT_N_S_soc_S_watchdog_50003000) fn(DT_N_S_soc_S_serial_40011000) fn(DT_N_S_soc_S_serial_40004400) fn(DT_N_S_soc_S_serial_40004800) fn(DT_N_S_soc_S_serial_40004c00) fn(DT_N_S_soc_S_serial_40005000) fn(DT_N_S_soc_S_serial_40011400) fn(DT_N_S_soc_S_serial_40007800) fn(DT_N_S_soc_S_serial_40007c00) fn(DT_N_S_soc_S_serial_58000c00) fn(DT_N_S_soc_S_rtc_58004000) fn(DT_N_S_soc_S_i2c_40005400) fn(DT_N_S_soc_S_i2c_40005800) fn(DT_N_S_soc_S_i2c_40005c00) fn(DT_N_S_soc_S_i2c_58001c00) fn(DT_N_S_soc_S_spi_40013000) fn(DT_N_S_soc_S_spi_40003800) fn(DT_N_S_soc_S_spi_40003c00) fn(DT_N_S_soc_S_spi_40013400) fn(DT_N_S_soc_S_spi_40015000) fn(DT_N_S_soc_S_spi_58001400) fn(DT_N_S_soc_S_i2s_40013000) fn(DT_N_S_soc_S_i2s_40003800) fn(DT_N_S_soc_S_i2s_40003c00) fn(DT_N_S_soc_S_can_4000a000) fn(DT_N_S_soc_S_can_4000a400) fn(DT_N_S_soc_S_timers_40010000) fn(DT_N_S_soc_S_timers_40010000_S_pwm) fn(DT_N_S_soc_S_timers_40000000) fn(DT_N_S_soc_S_timers_40000000_S_pwm) fn(DT_N_S_soc_S_timers_40000000_S_counter) fn(DT_N_S_soc_S_timers_40000400) fn(DT_N_S_soc_S_timers_40000400_S_pwm) fn(DT_N_S_soc_S_timers_40000400_S_counter) fn(DT_N_S_soc_S_timers_40000800) fn(DT_N_S_soc_S_timers_40000800_S_pwm) fn(DT_N_S_soc_S_timers_40000800_S_counter) fn(DT_N_S_soc_S_timers_40000c00) fn(DT_N_S_soc_S_timers_40000c00_S_pwm) fn(DT_N_S_soc_S_timers_40000c00_S_counter) fn(DT_N_S_soc_S_timers_40001000) fn(DT_N_S_soc_S_timers_40001000_S_counter) fn(DT_N_S_soc_S_timers_40001400) fn(DT_N_S_soc_S_timers_40001400_S_counter) fn(DT_N_S_soc_S_timers_40010400) fn(DT_N_S_soc_S_timers_40010400_S_pwm) fn(DT_N_S_soc_S_timers_40001800) fn(DT_N_S_soc_S_timers_40001800_S_pwm) fn(DT_N_S_soc_S_timers_40001800_S_counter) fn(DT_N_S_soc_S_timers_40001c00) fn(DT_N_S_soc_S_timers_40001c00_S_pwm) fn(DT_N_S_soc_S_timers_40001c00_S_counter) fn(DT_N_S_soc_S_timers_40002000) fn(DT_N_S_soc_S_timers_40002000_S_pwm) fn(DT_N_S_soc_S_timers_40002000_S_counter) fn(DT_N_S_soc_S_timers_40014000) fn(DT_N_S_soc_S_timers_40014000_S_pwm) fn(DT_N_S_soc_S_timers_40014000_S_counter) fn(DT_N_S_soc_S_timers_40014400) fn(DT_N_S_soc_S_timers_40014400_S_pwm) fn(DT_N_S_soc_S_timers_40014400_S_counter) fn(DT_N_S_soc_S_timers_40014800) fn(DT_N_S_soc_S_timers_40014800_S_pwm) fn(DT_N_S_soc_S_timers_40014800_S_counter) fn(DT_N_S_soc_S_timers_40002400) fn(DT_N_S_soc_S_adc_40022000) fn(DT_N_S_soc_S_adc_40022100) fn(DT_N_S_soc_S_adc_40022300) fn(DT_N_S_soc_S_dac_40007400) fn(DT_N_S_soc_S_dma_40020000) fn(DT_N_S_soc_S_dma_40020400) fn(DT_N_S_soc_S_bdma_58025400) fn(DT_N_S_soc_S_dmamux_40020800) fn(DT_N_S_soc_S_dmamux_58025800) fn(DT_N_S_soc_S_rng_48021800) fn(DT_N_S_soc_S_sdmmc_52007000) fn(DT_N_S_soc_S_sdmmc_48022400) fn(DT_N_S_soc_S_ethernet_40028000) fn(DT_N_S_soc_S_ethernet_40028000_S_ethernet) fn(DT_N_S_soc_S_ethernet_40028000_S_mdio) fn(DT_N_S_soc_S_memory_controller_52004000) fn(DT_N_S_soc_S_memory_controller_52004000_S_sdram) fn(DT_N_S_soc_S_memory_38800000) fn(DT_N_S_soc_S_spi_52005000) fn(DT_N_S_soc_S_dcmi_48020000) fn(DT_N_S_soc_S_sai1_40015804) fn(DT_N_S_soc_S_sai1_40015824) fn(DT_N_S_soc_S_usb_40040000) fn(DT_N_S_soc_S_display_controller_50001000) fn(DT_N_S_soc_S_spi_5200a000) fn(DT_N_S_soc_S_i2s_58001400) fn(DT_N_S_soc_S_digi_dietemp_58006800) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_clk_hse) fn(DT_N_S_clocks_S_clk_hsi) fn(DT_N_S_clocks_S_clk_hsi48) fn(DT_N_S_clocks_S_clk_csi) fn(DT_N_S_clocks_S_clk_lse) fn(DT_N_S_clocks_S_clk_lsi) fn(DT_N_S_clocks_S_pll_0) fn(DT_N_S_clocks_S_pll_1) fn(DT_N_S_clocks_S_pll_2) fn(DT_N_S_clocks_S_perck) fn(DT_N_S_mcos) fn(DT_N_S_mcos_S_mco1) fn(DT_N_S_mcos_S_mco2) fn(DT_N_S_dietemp) fn(DT_N_S_vbat) fn(DT_N_S_vref) fn(DT_N_S_smbus1) fn(DT_N_S_smbus2) fn(DT_N_S_smbus3) fn(DT_N_S_smbus4) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_red_pwm_led) fn(DT_N_S_gpio_keys) fn(DT_N_S_gpio_keys_S_button_0) fn(DT_N_S_steppermotors) fn(DT_N_S_steppermotors_S_motor_2)
 #define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_flash_controller_52002000) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000) fn(DT_N_S_soc_S_rcc_58024400) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller) fn(DT_N_S_soc_S_interrupt_controller_58000000) fn(DT_N_S_soc_S_pin_controller_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12) fn(DT_N_S_soc_S_serial_40004800) fn(DT_N_S_soc_S_serial_58000c00) fn(DT_N_S_soc_S_timers_40001800) fn(DT_N_S_soc_S_timers_40001800_S_pwm) fn(DT_N_S_soc_S_adc_40022000) fn(DT_N_S_soc_S_rng_48021800) fn(DT_N_S_soc_S_ethernet_40028000) fn(DT_N_S_soc_S_memory_38800000) fn(DT_N_S_soc_S_usb_40040000) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_clk_hse) fn(DT_N_S_clocks_S_clk_hsi48) fn(DT_N_S_clocks_S_pll_0) fn(DT_N_S_mcos) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_red_pwm_led) fn(DT_N_S_gpio_keys) fn(DT_N_S_gpio_keys_S_button_0) fn(DT_N_S_steppermotors) fn(DT_N_S_steppermotors_S_motor_2)
 #define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_58000000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_58004800, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_50003000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40011000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004400, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004c00, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40005000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40011400, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40007800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40007c00, __VA_ARGS__) fn(DT_N_S_soc_S_serial_58000c00, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_58004000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005400, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005800, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005c00, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_58001c00, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003800, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003c00, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40013400, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_58001400, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40003800, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40003c00, __VA_ARGS__) fn(DT_N_S_soc_S_can_4000a000, __VA_ARGS__) fn(DT_N_S_soc_S_can_4000a400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002400, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022100, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022300, __VA_ARGS__) fn(DT_N_S_soc_S_dac_40007400, __VA_ARGS__) fn(DT_N_S_soc_S_dma_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_dma_40020400, __VA_ARGS__) fn(DT_N_S_soc_S_bdma_58025400, __VA_ARGS__) fn(DT_N_S_soc_S_dmamux_40020800, __VA_ARGS__) fn(DT_N_S_soc_S_dmamux_58025800, __VA_ARGS__) fn(DT_N_S_soc_S_rng_48021800, __VA_ARGS__) fn(DT_N_S_soc_S_sdmmc_52007000, __VA_ARGS__) fn(DT_N_S_soc_S_sdmmc_48022400, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000_S_ethernet, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000_S_mdio, __VA_ARGS__) fn(DT_N_S_soc_S_memory_controller_52004000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_controller_52004000_S_sdram, __VA_ARGS__) fn(DT_N_S_soc_S_memory_38800000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_52005000, __VA_ARGS__) fn(DT_N_S_soc_S_dcmi_48020000, __VA_ARGS__) fn(DT_N_S_soc_S_sai1_40015804, __VA_ARGS__) fn(DT_N_S_soc_S_sai1_40015824, __VA_ARGS__) fn(DT_N_S_soc_S_usb_40040000, __VA_ARGS__) fn(DT_N_S_soc_S_display_controller_50001000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_5200a000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_58001400, __VA_ARGS__) fn(DT_N_S_soc_S_digi_dietemp_58006800, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi48, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_csi, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_lse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_lsi, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_0, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_1, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_2, __VA_ARGS__) fn(DT_N_S_clocks_S_perck, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_mcos_S_mco1, __VA_ARGS__) fn(DT_N_S_mcos_S_mco2, __VA_ARGS__) fn(DT_N_S_dietemp, __VA_ARGS__) fn(DT_N_S_vbat, __VA_ARGS__) fn(DT_N_S_vref, __VA_ARGS__) fn(DT_N_S_smbus1, __VA_ARGS__) fn(DT_N_S_smbus2, __VA_ARGS__) fn(DT_N_S_smbus3, __VA_ARGS__) fn(DT_N_S_smbus4, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_red_pwm_led, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_gpio_keys_S_button_0, __VA_ARGS__) fn(DT_N_S_steppermotors, __VA_ARGS__) fn(DT_N_S_steppermotors_S_motor_2, __VA_ARGS__)
 #define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_58000000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_58000c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_rng_48021800, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_38800000, __VA_ARGS__) fn(DT_N_S_soc_S_usb_40040000, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi48, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_0, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_red_pwm_led, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_gpio_keys_S_button_0, __VA_ARGS__) fn(DT_N_S_steppermotors, __VA_ARGS__) fn(DT_N_S_steppermotors_S_motor_2, __VA_ARGS__)
-=======
-#define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_flash_controller_52002000) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000) fn(DT_N_S_soc_S_rcc_58024400) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller) fn(DT_N_S_soc_S_interrupt_controller_58000000) fn(DT_N_S_soc_S_pin_controller_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12) fn(DT_N_S_soc_S_watchdog_58004800) fn(DT_N_S_soc_S_watchdog_50003000) fn(DT_N_S_soc_S_serial_40011000) fn(DT_N_S_soc_S_serial_40004400) fn(DT_N_S_soc_S_serial_40004800) fn(DT_N_S_soc_S_serial_40004c00) fn(DT_N_S_soc_S_serial_40005000) fn(DT_N_S_soc_S_serial_40011400) fn(DT_N_S_soc_S_serial_40007800) fn(DT_N_S_soc_S_serial_40007c00) fn(DT_N_S_soc_S_serial_58000c00) fn(DT_N_S_soc_S_rtc_58004000) fn(DT_N_S_soc_S_i2c_40005400) fn(DT_N_S_soc_S_i2c_40005800) fn(DT_N_S_soc_S_i2c_40005c00) fn(DT_N_S_soc_S_i2c_58001c00) fn(DT_N_S_soc_S_spi_40013000) fn(DT_N_S_soc_S_spi_40003800) fn(DT_N_S_soc_S_spi_40003c00) fn(DT_N_S_soc_S_spi_40013400) fn(DT_N_S_soc_S_spi_40015000) fn(DT_N_S_soc_S_spi_58001400) fn(DT_N_S_soc_S_i2s_40013000) fn(DT_N_S_soc_S_i2s_40003800) fn(DT_N_S_soc_S_i2s_40003c00) fn(DT_N_S_soc_S_can_4000a000) fn(DT_N_S_soc_S_can_4000a400) fn(DT_N_S_soc_S_timers_40010000) fn(DT_N_S_soc_S_timers_40010000_S_pwm) fn(DT_N_S_soc_S_timers_40000000) fn(DT_N_S_soc_S_timers_40000000_S_pwm) fn(DT_N_S_soc_S_timers_40000000_S_counter) fn(DT_N_S_soc_S_timers_40000400) fn(DT_N_S_soc_S_timers_40000400_S_pwm) fn(DT_N_S_soc_S_timers_40000400_S_counter) fn(DT_N_S_soc_S_timers_40000800) fn(DT_N_S_soc_S_timers_40000800_S_pwm) fn(DT_N_S_soc_S_timers_40000800_S_counter) fn(DT_N_S_soc_S_timers_40000c00) fn(DT_N_S_soc_S_timers_40000c00_S_pwm) fn(DT_N_S_soc_S_timers_40000c00_S_counter) fn(DT_N_S_soc_S_timers_40001000) fn(DT_N_S_soc_S_timers_40001000_S_counter) fn(DT_N_S_soc_S_timers_40001400) fn(DT_N_S_soc_S_timers_40001400_S_counter) fn(DT_N_S_soc_S_timers_40010400) fn(DT_N_S_soc_S_timers_40010400_S_pwm) fn(DT_N_S_soc_S_timers_40001800) fn(DT_N_S_soc_S_timers_40001800_S_pwm) fn(DT_N_S_soc_S_timers_40001800_S_counter) fn(DT_N_S_soc_S_timers_40001c00) fn(DT_N_S_soc_S_timers_40001c00_S_pwm) fn(DT_N_S_soc_S_timers_40001c00_S_counter) fn(DT_N_S_soc_S_timers_40002000) fn(DT_N_S_soc_S_timers_40002000_S_pwm) fn(DT_N_S_soc_S_timers_40002000_S_counter) fn(DT_N_S_soc_S_timers_40014000) fn(DT_N_S_soc_S_timers_40014000_S_pwm) fn(DT_N_S_soc_S_timers_40014000_S_counter) fn(DT_N_S_soc_S_timers_40014400) fn(DT_N_S_soc_S_timers_40014400_S_pwm) fn(DT_N_S_soc_S_timers_40014400_S_counter) fn(DT_N_S_soc_S_timers_40014800) fn(DT_N_S_soc_S_timers_40014800_S_pwm) fn(DT_N_S_soc_S_timers_40014800_S_counter) fn(DT_N_S_soc_S_timers_40002400) fn(DT_N_S_soc_S_adc_40022000) fn(DT_N_S_soc_S_adc_40022100) fn(DT_N_S_soc_S_adc_40022300) fn(DT_N_S_soc_S_dac_40007400) fn(DT_N_S_soc_S_dma_40020000) fn(DT_N_S_soc_S_dma_40020400) fn(DT_N_S_soc_S_bdma_58025400) fn(DT_N_S_soc_S_dmamux_40020800) fn(DT_N_S_soc_S_dmamux_58025800) fn(DT_N_S_soc_S_rng_48021800) fn(DT_N_S_soc_S_sdmmc_52007000) fn(DT_N_S_soc_S_sdmmc_48022400) fn(DT_N_S_soc_S_ethernet_40028000) fn(DT_N_S_soc_S_ethernet_40028000_S_ethernet) fn(DT_N_S_soc_S_ethernet_40028000_S_mdio) fn(DT_N_S_soc_S_memory_controller_52004000) fn(DT_N_S_soc_S_memory_controller_52004000_S_sdram) fn(DT_N_S_soc_S_memory_38800000) fn(DT_N_S_soc_S_spi_52005000) fn(DT_N_S_soc_S_dcmi_48020000) fn(DT_N_S_soc_S_sai1_40015804) fn(DT_N_S_soc_S_sai1_40015824) fn(DT_N_S_soc_S_usb_40040000) fn(DT_N_S_soc_S_display_controller_50001000) fn(DT_N_S_soc_S_spi_5200a000) fn(DT_N_S_soc_S_i2s_58001400) fn(DT_N_S_soc_S_digi_dietemp_58006800) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_clk_hse) fn(DT_N_S_clocks_S_clk_hsi) fn(DT_N_S_clocks_S_clk_hsi48) fn(DT_N_S_clocks_S_clk_csi) fn(DT_N_S_clocks_S_clk_lse) fn(DT_N_S_clocks_S_clk_lsi) fn(DT_N_S_clocks_S_pll_0) fn(DT_N_S_clocks_S_pll_1) fn(DT_N_S_clocks_S_pll_2) fn(DT_N_S_clocks_S_perck) fn(DT_N_S_mcos) fn(DT_N_S_mcos_S_mco1) fn(DT_N_S_mcos_S_mco2) fn(DT_N_S_dietemp) fn(DT_N_S_vbat) fn(DT_N_S_vref) fn(DT_N_S_smbus1) fn(DT_N_S_smbus2) fn(DT_N_S_smbus3) fn(DT_N_S_smbus4) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_red_pwm_led) fn(DT_N_S_gpio_keys) fn(DT_N_S_gpio_keys_S_button_0) fn(DT_N_S_stepper_motors) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_FOREACH_OKAY_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_flash_controller_52002000) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000) fn(DT_N_S_soc_S_rcc_58024400) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller) fn(DT_N_S_soc_S_interrupt_controller_58000000) fn(DT_N_S_soc_S_pin_controller_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12) fn(DT_N_S_soc_S_serial_40004800) fn(DT_N_S_soc_S_serial_58000c00) fn(DT_N_S_soc_S_timers_40001800) fn(DT_N_S_soc_S_timers_40001800_S_pwm) fn(DT_N_S_soc_S_adc_40022000) fn(DT_N_S_soc_S_rng_48021800) fn(DT_N_S_soc_S_ethernet_40028000) fn(DT_N_S_soc_S_memory_38800000) fn(DT_N_S_soc_S_usb_40040000) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90) fn(DT_N_S_memory_90000000) fn(DT_N_S_clocks) fn(DT_N_S_clocks_S_clk_hse) fn(DT_N_S_clocks_S_clk_hsi48) fn(DT_N_S_clocks_S_pll_0) fn(DT_N_S_mcos) fn(DT_N_S_memory_24000000) fn(DT_N_S_memory_24040000) fn(DT_N_S_memory_240a0000) fn(DT_N_S_memory_30000000) fn(DT_N_S_memory_30010000) fn(DT_N_S_memory_38000000) fn(DT_N_S_memory_20000000) fn(DT_N_S_memory_0) fn(DT_N_S_memory_70000000) fn(DT_N_S_otghs_fs_phy) fn(DT_N_S_connector) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_pwmleds) fn(DT_N_S_pwmleds_S_red_pwm_led) fn(DT_N_S_gpio_keys) fn(DT_N_S_gpio_keys_S_button_0) fn(DT_N_S_stepper_motors) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_FOREACH_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_58000000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_58004800, __VA_ARGS__) fn(DT_N_S_soc_S_watchdog_50003000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40011000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004400, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004c00, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40005000, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40011400, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40007800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40007c00, __VA_ARGS__) fn(DT_N_S_soc_S_serial_58000c00, __VA_ARGS__) fn(DT_N_S_soc_S_rtc_58004000, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005400, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005800, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_40005c00, __VA_ARGS__) fn(DT_N_S_soc_S_i2c_58001c00, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003800, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40003c00, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40013400, __VA_ARGS__) fn(DT_N_S_soc_S_spi_40015000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_58001400, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40013000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40003800, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_40003c00, __VA_ARGS__) fn(DT_N_S_soc_S_can_4000a000, __VA_ARGS__) fn(DT_N_S_soc_S_can_4000a400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40000c00_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40010400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001c00_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014000_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014400_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40014800_S_counter, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40002400, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022100, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022300, __VA_ARGS__) fn(DT_N_S_soc_S_dac_40007400, __VA_ARGS__) fn(DT_N_S_soc_S_dma_40020000, __VA_ARGS__) fn(DT_N_S_soc_S_dma_40020400, __VA_ARGS__) fn(DT_N_S_soc_S_bdma_58025400, __VA_ARGS__) fn(DT_N_S_soc_S_dmamux_40020800, __VA_ARGS__) fn(DT_N_S_soc_S_dmamux_58025800, __VA_ARGS__) fn(DT_N_S_soc_S_rng_48021800, __VA_ARGS__) fn(DT_N_S_soc_S_sdmmc_52007000, __VA_ARGS__) fn(DT_N_S_soc_S_sdmmc_48022400, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000_S_ethernet, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000_S_mdio, __VA_ARGS__) fn(DT_N_S_soc_S_memory_controller_52004000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_controller_52004000_S_sdram, __VA_ARGS__) fn(DT_N_S_soc_S_memory_38800000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_52005000, __VA_ARGS__) fn(DT_N_S_soc_S_dcmi_48020000, __VA_ARGS__) fn(DT_N_S_soc_S_sai1_40015804, __VA_ARGS__) fn(DT_N_S_soc_S_sai1_40015824, __VA_ARGS__) fn(DT_N_S_soc_S_usb_40040000, __VA_ARGS__) fn(DT_N_S_soc_S_display_controller_50001000, __VA_ARGS__) fn(DT_N_S_soc_S_spi_5200a000, __VA_ARGS__) fn(DT_N_S_soc_S_i2s_58001400, __VA_ARGS__) fn(DT_N_S_soc_S_digi_dietemp_58006800, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi48, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_csi, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_lse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_lsi, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_0, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_1, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_2, __VA_ARGS__) fn(DT_N_S_clocks_S_perck, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_mcos_S_mco1, __VA_ARGS__) fn(DT_N_S_mcos_S_mco2, __VA_ARGS__) fn(DT_N_S_dietemp, __VA_ARGS__) fn(DT_N_S_vbat, __VA_ARGS__) fn(DT_N_S_vref, __VA_ARGS__) fn(DT_N_S_smbus1, __VA_ARGS__) fn(DT_N_S_smbus2, __VA_ARGS__) fn(DT_N_S_smbus3, __VA_ARGS__) fn(DT_N_S_smbus4, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_red_pwm_led, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_gpio_keys_S_button_0, __VA_ARGS__) fn(DT_N_S_stepper_motors, __VA_ARGS__) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-#define DT_FOREACH_OKAY_VARGS_HELPER(fn, ...) fn(DT_N, __VA_ARGS__) fn(DT_N_S_chosen, __VA_ARGS__) fn(DT_N_S_aliases, __VA_ARGS__) fn(DT_N_S_soc, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_e000e100, __VA_ARGS__) fn(DT_N_S_soc_S_timer_e000e010, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000, __VA_ARGS__) fn(DT_N_S_soc_S_flash_controller_52002000_S_flash_8000000, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400, __VA_ARGS__) fn(DT_N_S_soc_S_rcc_58024400_S_reset_controller, __VA_ARGS__) fn(DT_N_S_soc_S_interrupt_controller_58000000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58020c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58021c00, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022000, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022400, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_gpio_58022800, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_adc1_inp15_pa3, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_tim12_ch1_pb14, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_rx_pb7, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_rx_pd9, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_lpuart1_tx_pb6, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usart3_tx_pd8, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dm_pa11, __VA_ARGS__) fn(DT_N_S_soc_S_pin_controller_58020000_S_usb_otg_hs_dp_pa12, __VA_ARGS__) fn(DT_N_S_soc_S_serial_40004800, __VA_ARGS__) fn(DT_N_S_soc_S_serial_58000c00, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800, __VA_ARGS__) fn(DT_N_S_soc_S_timers_40001800_S_pwm, __VA_ARGS__) fn(DT_N_S_soc_S_adc_40022000, __VA_ARGS__) fn(DT_N_S_soc_S_rng_48021800, __VA_ARGS__) fn(DT_N_S_soc_S_ethernet_40028000, __VA_ARGS__) fn(DT_N_S_soc_S_memory_38800000, __VA_ARGS__) fn(DT_N_S_soc_S_usb_40040000, __VA_ARGS__) fn(DT_N_S_cpus, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0, __VA_ARGS__) fn(DT_N_S_cpus_S_cpu_0_S_mpu_e000ed90, __VA_ARGS__) fn(DT_N_S_memory_90000000, __VA_ARGS__) fn(DT_N_S_clocks, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hse, __VA_ARGS__) fn(DT_N_S_clocks_S_clk_hsi48, __VA_ARGS__) fn(DT_N_S_clocks_S_pll_0, __VA_ARGS__) fn(DT_N_S_mcos, __VA_ARGS__) fn(DT_N_S_memory_24000000, __VA_ARGS__) fn(DT_N_S_memory_24040000, __VA_ARGS__) fn(DT_N_S_memory_240a0000, __VA_ARGS__) fn(DT_N_S_memory_30000000, __VA_ARGS__) fn(DT_N_S_memory_30010000, __VA_ARGS__) fn(DT_N_S_memory_38000000, __VA_ARGS__) fn(DT_N_S_memory_20000000, __VA_ARGS__) fn(DT_N_S_memory_0, __VA_ARGS__) fn(DT_N_S_memory_70000000, __VA_ARGS__) fn(DT_N_S_otghs_fs_phy, __VA_ARGS__) fn(DT_N_S_connector, __VA_ARGS__) fn(DT_N_S_leds, __VA_ARGS__) fn(DT_N_S_leds_S_led_0, __VA_ARGS__) fn(DT_N_S_leds_S_led_1, __VA_ARGS__) fn(DT_N_S_pwmleds, __VA_ARGS__) fn(DT_N_S_pwmleds_S_red_pwm_led, __VA_ARGS__) fn(DT_N_S_gpio_keys, __VA_ARGS__) fn(DT_N_S_gpio_keys_S_button_0, __VA_ARGS__) fn(DT_N_S_stepper_motors, __VA_ARGS__) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /*
  * Macros for compatibles with status "okay" nodes
@@ -26745,11 +26516,7 @@
 #define DT_COMPAT_HAS_OKAY_gpio_leds 1
 #define DT_COMPAT_HAS_OKAY_pwm_leds 1
 #define DT_COMPAT_HAS_OKAY_gpio_keys 1
-<<<<<<< HEAD
 #define DT_COMPAT_HAS_OKAY_stepper_motors 1
-=======
-#define DT_COMPAT_HAS_OKAY_gpio_stepper_motor 1
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /*
  * Macros for status "okay" instances of each compatible
@@ -26793,11 +26560,7 @@
 #define DT_N_INST_gpio_leds_NUM_OKAY 1
 #define DT_N_INST_pwm_leds_NUM_OKAY 1
 #define DT_N_INST_gpio_keys_NUM_OKAY 1
-<<<<<<< HEAD
 #define DT_N_INST_stepper_motors_NUM_OKAY 1
-=======
-#define DT_N_INST_gpio_stepper_motor_NUM_OKAY 1
->>>>>>> parent of 5731347 (rewrote with just overlay)
 #define DT_FOREACH_OKAY_st_stm32h7a3zi_q_nucleo(fn) fn(DT_N)
 #define DT_FOREACH_OKAY_VARGS_st_stm32h7a3zi_q_nucleo(fn, ...) fn(DT_N, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_st_stm32h7a3zi_q_nucleo(fn) fn(0)
@@ -26954,17 +26717,10 @@
 #define DT_FOREACH_OKAY_VARGS_gpio_keys(fn, ...) fn(DT_N_S_gpio_keys, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_gpio_keys(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_gpio_keys(fn, ...) fn(0, __VA_ARGS__)
-<<<<<<< HEAD
 #define DT_FOREACH_OKAY_stepper_motors(fn) fn(DT_N_S_steppermotors)
 #define DT_FOREACH_OKAY_VARGS_stepper_motors(fn, ...) fn(DT_N_S_steppermotors, __VA_ARGS__)
 #define DT_FOREACH_OKAY_INST_stepper_motors(fn) fn(0)
 #define DT_FOREACH_OKAY_INST_VARGS_stepper_motors(fn, ...) fn(0, __VA_ARGS__)
-=======
-#define DT_FOREACH_OKAY_gpio_stepper_motor(fn) fn(DT_N_S_stepper_motors_S_stepper_motor_2)
-#define DT_FOREACH_OKAY_VARGS_gpio_stepper_motor(fn, ...) fn(DT_N_S_stepper_motors_S_stepper_motor_2, __VA_ARGS__)
-#define DT_FOREACH_OKAY_INST_gpio_stepper_motor(fn) fn(0)
-#define DT_FOREACH_OKAY_INST_VARGS_gpio_stepper_motor(fn, ...) fn(0, __VA_ARGS__)
->>>>>>> parent of 5731347 (rewrote with just overlay)
 
 /*
  * Bus information for status "okay" nodes of each compatible

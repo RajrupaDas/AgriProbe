@@ -10,7 +10,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0x8001f65
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          1045576 (bytes into file)
+  Start of section headers:          1045248 (bytes into file)
   Flags:                             0x5000200, Version5 EABI, soft-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -45,20 +45,20 @@ Section Headers:
   [21] k_sem_area        PROGBITS        24000118 007cc8 000010 00  WA  0   0  4
   [22] .comment          PROGBITS        00000000 007cdc 000020 01  MS  0   0  1
   [23] .debug_aranges    PROGBITS        00000000 007d00 001530 00      0   0  8
-  [24] .debug_info       PROGBITS        00000000 009230 075a6b 00      0   0  1
-  [25] .debug_abbrev     PROGBITS        00000000 07ec9b 00de0e 00      0   0  1
-  [26] .debug_line       PROGBITS        00000000 08caa9 0278c3 00      0   0  1
-  [27] .debug_frame      PROGBITS        00000000 0b436c 003370 00      0   0  4
-  [28] .debug_str        PROGBITS        00000000 0b76dc 00beda 01  MS  0   0  1
-  [29] .debug_loc        PROGBITS        00000000 0c35b6 025687 00      0   0  1
-  [30] .debug_ranges     PROGBITS        00000000 0e8c40 006410 00      0   0  8
-  [31] .ARM.attributes   ARM_ATTRIBUTES  00000000 0ef050 000032 00      0   0  1
+  [24] .debug_info       PROGBITS        00000000 009230 07598d 00      0   0  1
+  [25] .debug_abbrev     PROGBITS        00000000 07ebbd 00ddfa 00      0   0  1
+  [26] .debug_line       PROGBITS        00000000 08c9b7 0278c2 00      0   0  1
+  [27] .debug_frame      PROGBITS        00000000 0b427c 003370 00      0   0  4
+  [28] .debug_str        PROGBITS        00000000 0b75ec 00be79 01  MS  0   0  1
+  [29] .debug_loc        PROGBITS        00000000 0c3465 025687 00      0   0  1
+  [30] .debug_ranges     PROGBITS        00000000 0e8af0 006410 00      0   0  8
+  [31] .ARM.attributes   ARM_ATTRIBUTES  00000000 0eef00 000032 00      0   0  1
   [32] .last_section     PROGBITS        08007be0 007cd8 000004 00  WA  0   0  4
   [33] bss               NOBITS          24000128 007ce8 0009b6 00  WA  0   0  8
   [34] noinit            NOBITS          24000b00 007ce8 001980 00  WA  0   0 64
-  [35] .symtab           SYMTAB          00000000 0ef084 008680 10     36 1079  4
-  [36] .strtab           STRTAB          00000000 0f7704 007b73 00      0   0  1
-  [37] .shstrtab         STRTAB          00000000 0ff277 0001cf 00      0   0  1
+  [35] .symtab           SYMTAB          00000000 0eef34 008680 10     36 1079  4
+  [36] .strtab           STRTAB          00000000 0f75b4 007b7d 00      0   0  1
+  [37] .shstrtab         STRTAB          00000000 0ff131 0001cf 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),

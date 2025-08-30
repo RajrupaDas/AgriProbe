@@ -11282,14 +11282,11 @@ DT_COMPAT_STEMMA_QT_CONNECTOR := stemma-qt-connector
 config DT_HAS_STEMMA_QT_CONNECTOR_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_STEMMA_QT_CONNECTOR))
 
-<<<<<<< HEAD
 DT_COMPAT_STEPPER_MOTORS := stepper-motors
 
 config DT_HAS_STEPPER_MOTORS_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_STEPPER_MOTORS))
 
-=======
->>>>>>> parent of 5731347 (rewrote with just overlay)
 DT_COMPAT_SWERV_PIC := swerv,pic
 
 config DT_HAS_SWERV_PIC_ENABLED
