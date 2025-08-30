@@ -5628,6 +5628,7 @@ zephyr_udc0: &usbotg_hs {
 };
 # 0 "<command-line>" 2
 # 1 "./boards/app.overlay" 1
+<<<<<<< HEAD
 / {
 
  aliases {
@@ -5642,6 +5643,37 @@ zephyr_udc0: &usbotg_hs {
    step-gpios = <&gpioc 0 (1 << 0)>;
   };
  };
+=======
+# 9 "./boards/app.overlay"
+# 1 "/home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/sensor/qdec_stm32.h" 1 3 4
+# 10 "./boards/app.overlay" 2
+
+/ {
+
+
+
+
+
+    aliases {
+        gpiob = &gpiob;
+        gpioc = &gpioc;
+    };
+
+
+
+
+
+
+    stepper-motors {
+        stepper_motor_2: stepper-motor-2 {
+            compatible = "gpio-stepper-motor";
+            status = "okay";
+            label = "First Link Stepper Motor";
+            dir-gpios = <&gpioa 7 (0 << 0)>;
+            step-gpios = <&gpioa 0 (0 << 0)>;
+        };
+    };
+>>>>>>> parent of 5731347 (rewrote with just overlay)
 };
 # 0 "<command-line>" 2
 # 1 "/home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c"

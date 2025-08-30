@@ -6,11 +6,19 @@ set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_CHOSEN|zephyr,sram" "/
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_CHOSEN|zephyr,flash" "/soc/flash-controller@52002000/flash@8000000")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_CHOSEN|zephyr,dtcm" "/memory@20000000")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_CHOSEN|zephyr,itcm" "/memory@0")
+<<<<<<< HEAD
+=======
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|gpiob" "/soc/pin-controller@58020000/gpio@58020400")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|gpioc" "/soc/pin-controller@58020000/gpio@58020800")
+>>>>>>> parent of 5731347 (rewrote with just overlay)
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|led0" "/leds/led_0")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|led1" "/leds/led_1")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|pwm-led0" "/pwmleds/red_pwm_led")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|sw0" "/gpio_keys/button_0")
+<<<<<<< HEAD
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_ALIAS|stepper-motor2" "/steppermotors/motor_2")
+=======
+>>>>>>> parent of 5731347 (rewrote with just overlay)
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_NODE|/" TRUE)
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/|compatible" "st,stm32h7a3zi-q-nucleo;")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/|NUM" "0")
@@ -2146,6 +2154,7 @@ set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/gpio_keys/button
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/gpio_keys/button_0|NUM" "0")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/gpio_keys/button_0|ADDR" "")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/gpio_keys/button_0|SIZE" "")
+<<<<<<< HEAD
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_NODE|/steppermotors" TRUE)
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/steppermotors|compatible" "stepper-motors;")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/steppermotors|NUM" "0")
@@ -2157,6 +2166,20 @@ set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/steppermotors/mo
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/steppermotors/motor_2|NUM" "0")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/steppermotors/motor_2|ADDR" "")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/steppermotors/motor_2|SIZE" "")
+=======
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_NODE|/stepper-motors" TRUE)
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors|NUM" "0")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors|ADDR" "")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors|SIZE" "")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_NODE|/stepper-motors/stepper-motor-2" TRUE)
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_NODELABEL|stepper_motor_2" "/stepper-motors/stepper-motor-2")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/stepper-motors/stepper-motor-2|compatible" "gpio-stepper-motor;")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/stepper-motors/stepper-motor-2|status" "okay")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_PROP|/stepper-motors/stepper-motor-2|label" "First Link Stepper Motor")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors/stepper-motor-2|NUM" "0")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors/stepper-motor-2|ADDR" "")
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_REG|/stepper-motors/stepper-motor-2|SIZE" "")
+>>>>>>> parent of 5731347 (rewrote with just overlay)
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|st,stm32h7a3zi-q-nucleo" "/")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|st,stm32h7a3" "/soc")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|st,stm32h7" "/soc")
@@ -2231,4 +2254,8 @@ set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|arduino-header-r3
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|gpio-leds" "/leds")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|pwm-leds" "/pwmleds")
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|gpio-keys" "/gpio_keys")
+<<<<<<< HEAD
 set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|stepper-motors" "/steppermotors")
+=======
+set_target_properties(${DEVICETREE_TARGET} PROPERTIES "DT_COMP|gpio-stepper-motor" "/stepper-motors/stepper-motor-2")
+>>>>>>> parent of 5731347 (rewrote with just overlay)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 / {
 	
 	aliases {
@@ -15,3 +16,42 @@
 };
 
 
+=======
+/*
+ * This file contains an overlay for the Nucleo board's Device Tree.
+ *
+ * It defines aliases for the GPIO controllers on the board
+ * so they can be easily referenced by name in other nodes.
+ *
+ * It also defines the stepper motor device with its GPIO pins.
+ */
+#include <zephyr/dt-bindings/sensor/qdec_stm32.h>
+
+/ {
+    /*
+     * Define aliases for the GPIO controllers.
+     * This is necessary because the main Devicetree file may not
+     * have these aliases defined, causing the build to fail.
+     */
+    aliases {
+        gpiob = &gpiob;
+        gpioc = &gpioc;
+    };
+
+    /*
+     * This is your original stepper motor node definition.
+     * With the aliases defined above, this node's 'dir-gpios'
+     * and 'step-gpios' properties will now resolve correctly.
+     */
+    stepper-motors {
+        stepper_motor_2: stepper-motor-2 {
+            compatible = "gpio-stepper-motor";
+            status = "okay";
+            label = "First Link Stepper Motor";
+            dir-gpios = <&gpioa 7 GPIO_ACTIVE_HIGH>;
+            step-gpios = <&gpioa 0 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
+
+>>>>>>> parent of 5731347 (rewrote with just overlay)

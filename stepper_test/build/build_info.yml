@@ -10,7 +10,10 @@ cmake:
     revision: ''
   devicetree:
     bindings-dirs:
+<<<<<<< HEAD
      - '/home/quantumvortex/zephyrproject/agriprobe/stepper_test/dts/bindings'
+=======
+>>>>>>> parent of 5731347 (rewrote with just overlay)
      - '/home/quantumvortex/zephyrproject/zephyr/dts/bindings'
     files:
      - '/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts'
@@ -27,7 +30,10 @@ cmake:
      - '/home/quantumvortex/zephyrproject/modules/hal/nxp/dts'
      - '/home/quantumvortex/zephyrproject/modules/hal/stm32/dts'
      - '/home/quantumvortex/zephyrproject/modules/hal/ti/dts'
+<<<<<<< HEAD
      - '/home/quantumvortex/zephyrproject/agriprobe/stepper_test/dts'
+=======
+>>>>>>> parent of 5731347 (rewrote with just overlay)
      - '/home/quantumvortex/zephyrproject/zephyr/include'
      - '/home/quantumvortex/zephyrproject/zephyr/include/zephyr'
      - '/home/quantumvortex/zephyrproject/zephyr/dts/common'
@@ -58,6 +64,10 @@ cmake:
     zephyr-base: '/home/quantumvortex/zephyrproject/zephyr'
 version: '0.1.0'
 west:
+<<<<<<< HEAD
   command: '/home/quantumvortex/zephyrproject/.zeph/bin/west build -p always -o=-j4 -b nucleo_h7a3zi_q .'
+=======
+  command: '/home/quantumvortex/zephyrproject/.zeph/bin/west build -p=always -o=-j10 -b nucleo_h7a3zi_q'
+>>>>>>> parent of 5731347 (rewrote with just overlay)
   topdir: '/home/quantumvortex/zephyrproject'
   version: '1.4.0'
