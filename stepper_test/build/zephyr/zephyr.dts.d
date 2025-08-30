@@ -38,5 +38,4 @@ empty_file.o: /home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/pinctrl/stm32-pinctrl-common.h \
  /home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/arduino_r3_connector.dtsi \
  /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h \
- boards/app.overlay \
- /home/quantumvortex/zephyrproject/zephyr/include/zephyr/dt-bindings/sensor/qdec_stm32.h
+ boards/app.overlay
