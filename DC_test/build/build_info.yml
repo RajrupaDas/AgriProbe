@@ -1,5 +1,63 @@
+cmake:
+  application:
+    configuration-dir: '/home/quantumvortex/zephyrproject/agriprobe/DC_test'
+    source-dir: '/home/quantumvortex/zephyrproject/agriprobe/DC_test'
+  board:
+    name: 'nucleo_h7a3zi_q'
+    path:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q'
+    qualifiers: 'stm32h7a3xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/dts/bindings'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q.dts'
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/boards/app.overlay'
+    include-dirs:
+     - '/home/quantumvortex/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/atmel/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/quantumvortex/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/microchip/include'
+     - '/home/quantumvortex/zephyrproject/modules/hal/microchip/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/nxp/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/stm32/dts'
+     - '/home/quantumvortex/zephyrproject/modules/hal/ti/dts'
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/dts'
+     - '/home/quantumvortex/zephyrproject/zephyr/include'
+     - '/home/quantumvortex/zephyrproject/zephyr/include/zephyr'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/common'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/vendor'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/rx'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/x86'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/xtensa'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/sparc'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/riscv'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/posix'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arm64'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arm'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts/arc'
+     - '/home/quantumvortex/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/boards/app.overlay'
+  kconfig:
+    files:
+     - '/home/quantumvortex/zephyrproject/zephyr/boards/st/nucleo_h7a3zi_q/nucleo_h7a3zi_q_defconfig'
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/prj.conf'
+    user-files:
+     - '/home/quantumvortex/zephyrproject/agriprobe/DC_test/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/quantumvortex/.local/opt/zephyr-sdk-0.17.0'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/quantumvortex/zephyrproject/zephyr'
+version: '0.1.0'
 west:
-  command: /home/quantumvortex/zephyrproject/.zeph/bin/west build -p always -o=-j4
-    -b nucleo_h7a3zi_q .
-  topdir: /home/quantumvortex/zephyrproject
-  version: 1.4.0
+  command: '/home/quantumvortex/zephyrproject/.zeph/bin/west build -p always -o=-j4 -b nucleo_h7a3zi_q .'
+  topdir: '/home/quantumvortex/zephyrproject'
+  version: '1.4.0'

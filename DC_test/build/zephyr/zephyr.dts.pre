@@ -5628,20 +5628,28 @@ zephyr_udc0: &usbotg_hs {
 };
 # 0 "<command-line>" 2
 # 1 "/home/quantumvortex/zephyrproject/agriprobe/DC_test/boards/app.overlay" 1
-/{
-    aliases {
-        pwm-motor0 = &pwm_motor0;
-    };
+/ {
+pwm-motors {
+compatible = "pwm-motors";
+sabertooth1_1: pwm_1 {
+pwms = <&pwm2 1 (((20) * 1000UL) * 1000UL) ((0 << 0))>;
+min-pulse = <((1100) * 1000UL)>;
+max-pulse = <((1900) * 1000UL)>;
+};
+};
+aliases {
+pwm-motor0 = &sabertooth1_1;
+};
+};
 
-    pwm_motors {
-        compatible = "pwm-motors";
-        pwm_motor0: motor-0 {
-            pwms = <&pwm12 1 (0 << 0)>;
-            min-pulse = <1000000>;
-            max-pulse = <2000000>;
-        };
-    };
-
+&timers2 {
+status = "okay";
+st,prescaler = <5599>;
+pwm2: pwm {
+status = "okay";
+pinctrl-0 = <&tim2_ch1_pa0 &tim2_ch2_pa1 &tim2_ch3_pa2 &tim2_ch4_pa3>;
+pinctrl-names = "default";
+};
 };
 # 0 "<command-line>" 2
 # 1 "/home/quantumvortex/zephyrproject/zephyr/misc/empty_file.c"
