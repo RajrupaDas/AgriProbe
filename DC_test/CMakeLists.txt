@@ -1,12 +1,8 @@
-cmake_minimum_required(VERSION 3.20.0)
-
-
-project(DC_test)
-set(DTC_OVERLAY_FILE "${CMAKE_CURRENT_SOURCE_DIR}/boards/app.overlay")
-find_package(Zephyr REQUIRED)
+cmake_minimum_required(VERSION 3.13.1)
+set(DTC_OVERLAY_FILE "boards/app.overlay")
+set(DTS_EXTRA_BINDINGS ${CMAKE_SOURCE_DIR}/dts)
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(Tarzan LANGUAGES C)
 
 target_sources(app PRIVATE src/main.c)
-set(DTC_EXTRA_BINDING_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/dts/bindings")
 
-
-target_link_libraries(app PRIVATE drivers__pwm)
