@@ -1,39 +1,24 @@
 / {
-pwm-motors {
-compatible = "pwm-motors";
-sabertooth1_1: pwm_1 {
-pwms  = <&pwm2 1 PWM_MSEC(20) (PWM_POLARITY_NORMAL)>;
-min-pulse = <PWM_USEC(1100)>;
-max-pulse = <PWM_USEC(1900)>;
-};
-};
-aliases {
-pwm-motor0 = &sabertooth1_1;
-};
+    pwm-motors {
+        compatible = "pwm-motors";
+        sabertooth1_1: pwm_1 {
+            status = "okay";
+            pwms = <&pwm2 1 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
+            min-pulse = <PWM_USEC(1100)>;
+            max-pulse = <PWM_USEC(1900)>;
+        };
+    };
 };
 
 &timers2 {
-status = "okay";
-st,prescaler = <5599>;
-pwm2: pwm {
-status = "okay";
-pinctrl-0 = <&tim2_ch1_pa0 &tim2_ch2_pa1 &tim2_ch3_pa2 &tim2_ch4_pa3>;
-pinctrl-names = "default";
+    status = "okay";
+    st,prescaler = <5599>;
+    pwm2: pwm {
+        status = "okay";
+        pinctrl-0 = <&tim2_ch1_pa0 &tim2_ch2_pa1 &tim2_ch3_pa2 &tim2_ch4_pa3>;
+        pinctrl-names = "default";
+    };
 };
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

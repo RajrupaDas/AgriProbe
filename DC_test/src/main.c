@@ -5,16 +5,15 @@
 #include <zephyr/sys/printk.h>
 
 /*
- * Get the PWM motor node from the devicetree using its alias.
- * This relies on the 'pwm-motors' compatible string and the
- * 'min-pulse' and 'max-pulse' properties from your YAML binding.
+ * Get the PWM motor node from the devicetree using its label.
+ * The node is labeled 'sabertooth1_1' in the app.overlay file.
  */
-#define MOTOR_NODE DT_ALIAS(pwm-motor0)
+#define MOTOR_NODE DT_NODELABEL(sabertooth1_1)
 
-// Check if the node is defined in the devicetree
-#if !DT_NODE_HAS_STATUS(MOTOR_NODE, okay)
-#error "Devicetree alias pwm-motor0 is not defined or is disabled."
-#endif
+// The original alias check is no longer needed since we are using DT_NODELABEL
+// #if !DT_NODE_HAS_STATUS(MOTOR_NODE, okay)
+// #error "Devicetree alias pwm-motors is not defined or is disabled."
+// #endif
 
 // Get the PWM device and properties from the devicetree
 static const struct pwm_dt_spec motor = PWM_DT_SPEC_GET(MOTOR_NODE);
@@ -42,7 +41,7 @@ static uint32_t calculate_pulse_width(uint32_t speed_percent, uint32_t min_pulse
     return min_pulse + ((max_pulse - min_pulse) * speed_percent) / 100;
 }
 
-void main(void) {
+int main(void) {
     int ret;
     uint32_t speed_percent = 0;
     int direction = 1;
@@ -81,4 +80,3 @@ void main(void) {
         k_sleep(K_MSEC(20));
     }
 }
-
