@@ -1,8 +1,7 @@
 # Agriprobe Simulation
 
 ## Overview
-This project simulates the control logic for the Agriprobe soil sampling system using Zephyr RTOS.
-It runs in `native_sim` mode with no hardware required.
+This project is control system for the Agriprobe soil sampling system using Zephyr RTOS.
 
 ## Hardware Model
 - **Z-axis stepper** – moves auger up and down on a lead screw.
